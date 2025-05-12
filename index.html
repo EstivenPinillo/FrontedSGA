@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+
+        <form action="POST" class="m-auto form-quote mt-5 border border-1 rounded-4 p-5">
+            
+            <h5 class="mt-3 mb-3 text-center">Formulario De Cotizaciones</h5>
+
+            <div class="col mb-3">
+                <label for="license_plate">Placa <span class="text-danger">*</span></label>
+                <input type="text" id="license_plate" name="license_plate" class="form-control" placeholder="Ingresa placa de vehiculo ..." required>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="name">Nombre <span class="text-danger">*</span></label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Ingresa nombre ..." required>
+                </div>
+                <div class="col">
+                    <label for="last_name">Apellido <span class="text-danger">*</span></label>
+                    <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Ingresa apellido ..." required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="date_birth">Fecha de nacimiento <span class="text-danger">*</span></label>
+                <input type="date" id="date_birth" name="date_birth" class="form-control" placeholder="Ingresa apellido ..." required>
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" id="quote" class="btn btn-primary btn-lg">Cotizar</button>
+            </div>
+
+        </form>
+
+        <div id="quoteWithOffers">
+
+        </div>
+
+    </div>
 </body>
+<footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="controller/quoteController.js"></script>
+</footer>
 </html>
