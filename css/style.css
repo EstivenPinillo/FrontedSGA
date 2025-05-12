@@ -1,5 +1,15 @@
 
 .form-quote {
     margin-top: 90px;
-    width: 500px;
+    width: 400px;
+}
+
+@media screen and (min-width: 700px) {
+    
+
+    .form-quote {
+        margin-top: 90px;
+        width: 500px;
+    }
+
 }
